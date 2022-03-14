@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Rectangle {
+class Rectangle {//Rectangle 클래스 선언
 public:
 	int width;
 	int height;
