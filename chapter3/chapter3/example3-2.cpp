@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-class Rectangle {//Rectangle Å¬·¡½º ¼±¾ğ
+class Rectangle {//Rectangle í´ë˜ìŠ¤ ì„ ì–¸
 public:
 	int width;
 	int height;
-	int getArea();
+	int getArea(); //ë©´ì ì„ ê³„ì‚°í•˜ì—¬ ë¦¬í„´í•˜ëŠ” í•¨ìˆ˜
 };
 
 int Rectangle::getArea() {
@@ -16,5 +16,5 @@ int main() {
 	Rectangle rect;
 	rect.width = 3;
 	rect.height = 5;
-	cout << "»ç°¢ÇüÀÇ ¸éÀûÀº " << rect.getArea() << endl;
+	cout << "ì‚¬ê°í˜•ì˜ ë©´ì ì€ " << rect.getArea() << endl;
 }
