@@ -2,19 +2,20 @@
 #include <string>
 using namespace std;
 
-class Data { //Å¬·¡½º ¼±¾ğºÎ
-	int Year, Month, Day; //¸â¹öº¯¼ö
+//chapter3-2
+class Data { //í´ë˜ìŠ¤ ì„ ì–¸ë¶€
+	int Year, Month, Day; //ë©¤ë²„ë³€ìˆ˜
 public:
-	Data(int y, int m, int d); //»ı¼ºÀÚ
-	Data(string s); //»ı¼ºÀÚ
-	void show(); //º¸¿©ÁÖ´Â ¸â¹öÇÔ¼ö
+	Data(int y, int m, int d); //ìƒì„±ì
+	Data(string s); //ìƒì„±ì
+	void show(); //ë³´ì—¬ì£¼ëŠ” ë©¤ë²„í•¨ìˆ˜
 	int getYear() { return Year; }
 	int getMonth() { return Month; }
 	int getDay() { return Day; }
 };
  
-//Å¬·¡½º ±¸ÇöºÎ
-//»ı¼ºÀÚ ±¸Çö
+//í´ë˜ìŠ¤ êµ¬í˜„ë¶€
+//ìƒì„±ì êµ¬í˜„
 Data::Data(int y, int m, int d) {
 	Year = y;
 	Month = m;
@@ -24,12 +25,12 @@ Data::Data(int y, int m, int d) {
 /*
 string s="1945";
 int n =stoi(s);
-°á°ú n=1945 Ãâ·ÂµÊ
+ê²°ê³¼ n=1945 ì¶œë ¥ë¨
 */
 
-//stoi=string to int ,stringÀ» int·Î º¯°æÇÏ´Â ÇÔ¼ö
-//substr('¹®ÀÚ¿­','½ÃÀÛÁöÁ¡','±æÀÌ')
-//strtok('¹®ÀÚ¿­','±¸ºĞÀÚ') ÀÌÀü ±¸ºĞÀÚ µÚ·Î ´Ù½Ã ±¸ºĞÀÚ¸¦ Ã£À¸·Á¸é strtok(NULL,'±¸ºĞÀÚ')
+//stoi=string to int ,stringì„ intë¡œ ë³€ê²½í•˜ëŠ” í•¨ìˆ˜
+//substr('ë¬¸ìì—´','ì‹œì‘ì§€ì ','ê¸¸ì´')
+//strtok('ë¬¸ìì—´','êµ¬ë¶„ì') ì´ì „ êµ¬ë¶„ì ë’¤ë¡œ ë‹¤ì‹œ êµ¬ë¶„ìë¥¼ ì°¾ìœ¼ë ¤ë©´ strtok(NULL,'êµ¬ë¶„ì')
 Data::Data(string s) {
 	Year = stoi(s.substr(0, 4));
 	Month = stoi(s.substr(5, 1));
@@ -37,7 +38,7 @@ Data::Data(string s) {
 }
 
 void Data::show() {
-	cout << Year << "³â" << Month << "¿ù" << Day << "ÀÏ" << endl;
+	cout << Year << "ë…„" << Month << "ì›”" << Day << "ì¼" << endl;
 }
 
 int main() {
