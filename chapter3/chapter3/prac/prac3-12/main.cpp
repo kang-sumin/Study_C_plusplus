@@ -1,13 +1,13 @@
 #include<iostream>
 using namespace std;
-
+ 
 #include "Ram.h"
-
+ 
 int main() {
     Ram ram;
-    ram.write(100, 20); // 100 ¹øÁö¿¡ 20 ÀúÀå 
-    ram.write(101, 30); // 101 ¹øÁö¿¡ 30 ÀúÀå 
+    ram.write(100, 20); // 100 ë²ˆì§€ì— 20 ì €ì¥ 
+    ram.write(101, 30); // 101 ë²ˆì§€ì— 30 ì €ì¥ 
     char res = ram.read(100) + ram.read(101); // 20 + 30 = 50
-    ram.write(102, res); // 102 ¹øÁö¿¡ 50 ÀúÀå 
-    cout << "102 ¹øÁöÀÇ °ª = " << (int)ram.read(102) << endl; // 102 ¹øÁö °ª Ãâ·Â 
+    ram.write(102, res); // 102 ë²ˆì§€ì— 50 ì €ì¥ 
+    cout << "102 ë²ˆì§€ì˜ ê°’ = " << (int)ram.read(102) << endl; // 102 ë²ˆì§€ ê°’ ì¶œë ¥ 
 }
