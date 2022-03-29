@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 int main() {
 	int* p = new int[5];
 	double sum = 0;
 
-	cout << "Á¤¼ö 5°³ ÀÔ·Â>> ";
+	cout << "ì •ìˆ˜ 5ê°œ ìž…ë ¥>> ";
 
 	for (int i = 0; i < 5; i++) {
 		cin >> p[i];
@@ -13,7 +13,7 @@ int main() {
 
 	}
 
-	cout << "Æò±Õ " << sum / 5 << endl;
+	cout << "í‰ê·  " << sum / 5 << endl;
 	
 	delete[] p;
 	return 0;
