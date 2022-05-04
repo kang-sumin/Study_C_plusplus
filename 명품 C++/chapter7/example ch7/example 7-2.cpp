@@ -1,3 +1,4 @@
+/*RectManager 클래스의 equals() 멤버 함수를 Rect 클래스의 프렌드로 선언함*/
 #include <iostream>
 using namespace std;
 
