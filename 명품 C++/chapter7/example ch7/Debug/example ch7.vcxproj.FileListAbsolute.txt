@@ -1,0 +1,2 @@
+E:\Github\Study_C_plusplus\명품 C++\chapter7\example ch7\Debug\example ch7.exe
+E:\Github\Study_C_plusplus\명품 C++\chapter7\example ch7\Debug\example ch7.pdb
