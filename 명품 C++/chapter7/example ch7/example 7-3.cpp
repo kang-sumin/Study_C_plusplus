@@ -1,27 +1,27 @@
-/*RectManager Å¬·¡½º ÀüÃ¼¸¦ Rect Å¬·¡½ºÀÇ ÇÁ·»µå·Î ¼±¾ğÇÔ, RectManager Å¬·¡½ºÀÇ ¸â¹öÇÔ¼ö´Â Rect Å¬·¡½ºÀÇ private ¸â¹öº¯¼ö¿¡ ÀÚÀ¯·Ó°Ô Á¢±Ù°¡´É*/
+/*RectManager í´ë˜ìŠ¤ ì „ì²´ë¥¼ Rect í´ë˜ìŠ¤ì˜ í”„ë Œë“œë¡œ ì„ ì–¸í•¨, RectManager í´ë˜ìŠ¤ì˜ ë©¤ë²„í•¨ìˆ˜ëŠ” Rect í´ë˜ìŠ¤ì˜ private ë©¤ë²„ë³€ìˆ˜ì— ììœ ë¡­ê²Œ ì ‘ê·¼ê°€ëŠ¥*/
 #include <iostream>
 using namespace std;
 
-class Rect; //Rect class°¡ ¼±¾ğµÇ±â Àü¿¡ ¸ÕÀú ÂüÁ¶µÇ´Â ÄÄÆÄÀÏ ¿À·ù(forward regerence)¸¦ ¸·±âÀ§ÇÑ ¼±¾ğ¹®(forward declaration)
+class Rect; //Rect classê°€ ì„ ì–¸ë˜ê¸° ì „ì— ë¨¼ì € ì°¸ì¡°ë˜ëŠ” ì»´íŒŒì¼ ì˜¤ë¥˜(forward regerence)ë¥¼ ë§‰ê¸°ìœ„í•œ ì„ ì–¸ë¬¸(forward declaration)
 
-//RectManager class ¼±¾ğ
+//RectManager class ì„ ì–¸
 class RectManager {
 public:
-	bool equals(Rect r, Rect s); //r°ú s°¡ °°À¸¸é true ¸®ÅÏ
-	void copy(Rect& dest, Rect& src); //src¸¦ dest¿¡ º¹»ç
+	bool equals(Rect r, Rect s); //rê³¼ sê°€ ê°™ìœ¼ë©´ true ë¦¬í„´
+	void copy(Rect& dest, Rect& src); //srcë¥¼ destì— ë³µì‚¬
 };
 
-//Rect class ¼±¾ğ
-//friend ¼±¾ğÀº Å¬·¡½º ³»ÀÇ private, public ¿µ¿ª µî ¾Æ¹« À§Ä¡¿¡¼­³ª °¡´ÉÇÔ
+//Rect class ì„ ì–¸
+//friend ì„ ì–¸ì€ í´ë˜ìŠ¤ ë‚´ì˜ private, public ì˜ì—­ ë“± ì•„ë¬´ ìœ„ì¹˜ì—ì„œë‚˜ ê°€ëŠ¥í•¨
 class Rect {
 	int width, height;
 public:
 	Rect(int width, int height) { this->width = width; this->height = height; }
-	//RectManager Å¬·¡½ºÀÇ ¸ğµç ÇÔ¼ö¸¦ ÇÁ·»µå ÇÔ¼ö·Î ¼±¾ğ
+	//RectManager í´ë˜ìŠ¤ì˜ ëª¨ë“  í•¨ìˆ˜ë¥¼ í”„ë Œë“œ í•¨ìˆ˜ë¡œ ì„ ì–¸
 	friend RectManager;
 };
 
-//RectManager::equals() ±¸Çö
+//RectManager::equals() êµ¬í˜„
 bool RectManager::equals(Rect r, Rect s) {
 	if (r.width == s.width && r.height == s.height)
 		return true;
@@ -29,7 +29,7 @@ bool RectManager::equals(Rect r, Rect s) {
 		return false;
 }
 
-//RectManager::copy() ±¸Çö
+//RectManager::copy() êµ¬í˜„
 void RectManager::copy(Rect& dest, Rect& src) {
 	dest.width = src.width;
 	dest.height = src.height;
@@ -37,10 +37,10 @@ void RectManager::copy(Rect& dest, Rect& src) {
 
 
 int main() {
-	Rect a(3, 4), b(5, 6);
+	Rect a(3, 4), b(5, 6); //ì„œë¡œë‹¤ë¥¸ ê°’ìœ¼ë¡œ ê°ì²´ a,b ìƒì„±
 	RectManager man;
 
-	man.copy(a, b); // b¸¦ a¿¡ º¹»çÇÔ : °´Ã¼ a ÀÇ width, height °ªÀÌ b¿Í °°¾ÆÁü
+	man.copy(a, b); // bë¥¼ aì— ë³µì‚¬í•¨ : ê°ì²´ a ì˜ width, height ê°’ì´ bì™€ ê°™ì•„ì§
 
 	if (man.equals(a, b))
 		cout << "equal" << endl;
