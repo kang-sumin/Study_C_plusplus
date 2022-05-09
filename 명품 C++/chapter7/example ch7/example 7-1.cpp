@@ -1,26 +1,26 @@
-/* 2°³ÀÇ Rect °´Ã¼¸¦ ºñ±³ÇÏ´Â bool equals(Rect r, Rect s)¸¦ Rect classÀÇ friend ÇÔ¼ö·Î ÀÛ¼ºÇÏ¶ó*/
+/* 2ê°œì˜ Rect ê°ì²´ë¥¼ ë¹„êµí•˜ëŠ” bool equals(Rect r, Rect s)ë¥¼ Rect classì˜ friend í•¨ìˆ˜ë¡œ ì‘ì„±í•˜ë¼ */
 
 #include <iostream>
 using namespace std;
 
 
-class Rect; //Rect class°¡ ¼±¾ğµÇ±â Àü¿¡ ¸ÕÀú ÂüÁ¶µÇ´Â ÄÄÆÄÀÏ ¿À·ù(forward reference)¸¦ ¸·±âÀ§ÇÑ ¼±¾ğ¹®(forward declaration))
-bool equals(Rect r, Rect s); //equals() ÇÔ¼ö ¼±¾ğ
+class Rect; //Rect classê°€ ì„ ì–¸ë˜ê¸° ì „ì— ë¨¼ì € ì°¸ì¡°ë˜ëŠ” ì»´íŒŒì¼ ì˜¤ë¥˜(forward reference)ë¥¼ ë§‰ê¸°ìœ„í•œ ì„ ì–¸ë¬¸(forward declaration))
+bool equals(Rect r, Rect s); //equals() í•¨ìˆ˜ ì„ ì–¸
 
 
-//Rect class ¼±¾ğ
+//Rect class ì„ ì–¸
 class Rect {
 	int width, height;
 public:
-	Rect(int width, int height) { this->width = width; this->height = height; }	//ÀÎ¶óÀÎ ÇÔ¼ö·Î ¼±¾ğ¹× ±¸ÇöÇÔ
-	friend bool equals(Rect r, Rect s); //equals() ÇÔ¼ö¸¦ ÇÁ·»µå ÇÔ¼ö·Î ¼±¾ğ
+	Rect(int width, int height) { this->width = width; this->height = height; }	//ì¸ë¼ì¸ í•¨ìˆ˜ë¡œ ì„ ì–¸ë° êµ¬í˜„í•¨
+	friend bool equals(Rect r, Rect s); //equals() í•¨ìˆ˜ë¥¼ í”„ë Œë“œ í•¨ìˆ˜ë¡œ ì„ ì–¸
 
 };
 
 
-//equals()ÇÔ¼ö ±¸Çö, equals()ÇÔ¼ö´Â ¿ÜºÎ ÇÔ¼öÀÓ
+//equals()í•¨ìˆ˜ êµ¬í˜„, equals()í•¨ìˆ˜ëŠ” ì™¸ë¶€ í•¨ìˆ˜ì„
 bool equals(Rect r, Rect s) {
-	if (r.width == s.width && r.height == s.height)	//¿ÜºÎ ÇÔ¼öÀÌÁö¸¸ Rect classÀÇ friend ÇÔ¼ö·Î ¼±¾ğµÇ¾î¼­ privateÇÑ width,height º¯¼ö¿¡ Á¢±Ù °¡´É
+	if (r.width == s.width && r.height == s.height)	//ì™¸ë¶€ í•¨ìˆ˜ì´ì§€ë§Œ Rect classì˜ friend í•¨ìˆ˜ë¡œ ì„ ì–¸ë˜ì–´ì„œ privateí•œ width,height ë³€ìˆ˜ì— ì ‘ê·¼ ê°€ëŠ¥
 		return true;
 	else
 		return false;
