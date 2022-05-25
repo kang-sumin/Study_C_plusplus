@@ -1,4 +1,4 @@
-/* 2개의 Rect 객체를 비교하는 bool equals(Rect r, Rect s)를 Rect class의 friend 함수로 작성하라 */
+/* 2개의 Rect 객체를 비교하는 bool equals(Rect r, Rect s)를 Rect class의 friend 함수로 작성하여라 */
 
 #include <iostream>
 using namespace std;
