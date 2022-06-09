@@ -2,6 +2,7 @@
 #include<string>
 using namespace std;
 
+//class ì„ ì–¸
 class Histogram {
     string sent;
 public:
@@ -34,7 +35,7 @@ void Histogram::print() {
         }
     }
     cout << endl << endl;
-    cout << "ÃÑ ¾ËÆÄºª ¼ö " << num;
+    cout << "ÃƒÃ‘ Â¾Ã‹Ã†Ã„ÂºÂª Â¼Ã¶ " << num;
     cout << endl << endl;
     for (int i = 0; i < 26; ++i) {
         char c = 'a' + i;
